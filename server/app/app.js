@@ -4,7 +4,7 @@ const index = require('./routes/index')
 const add_user = require('./routes/add-user')
 const cadastro_concluido = require('./routes/cadastro_concluido')
 const MongoConnectionFactory = require('../database/MongoConnectionFactory')
-const cors = require('cors')
+//const cors = require('cors')
 
 MongoConnectionFactory.getConnection()
 
@@ -12,7 +12,7 @@ const app = express()
 
 app.use(express.urlencoded({ extended: true }))      
 app.use(express.json())
-app.use(cors())
+//app.use(cors())
 
     /* set view engine */
 app.set('view engine', 'ejs')                           //npm install ejs --save

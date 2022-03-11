@@ -1,8 +1,11 @@
-export const RequestService = {
+ export const RequestService = {
+    
+    location: 'http://localhost:3000',
+    //location: 'https://crudapp-testes.herokuapp.com',   
 
     update(id, data) {
 
-        const options = {
+        const requestOptions = {
 
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
@@ -16,7 +19,7 @@ export const RequestService = {
             })
         }
 
-        return fetch('http://localhost:3000/add-user.html', options)
+        return fetch(`${this.location}/add-user.html`, requestOptions)
             .then(response =>
 
                 response.ok ? Promise.resolve(response.body) : Promise.reject(response.statusText)
@@ -25,14 +28,17 @@ export const RequestService = {
 
     delete(id) {
 
-        const options = {
+        const requestOptions = {
 
             method: 'DELETE'
         }
 
-        return fetch(`http://localhost:3000/${id}`, options)
+        return fetch(`${this.location}/${id}`, requestOptions)
             .then(response =>
                 response.ok ? Promise.resolve(response.body) : Promise.reject(response.statusText)
             )
     }
 }
+
+
+

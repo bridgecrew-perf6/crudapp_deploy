@@ -68,9 +68,6 @@ const PessoaController = {
 
         const { id } = request.params
 
-        console.log('testando')
-        console.log(id)
-
         Pessoa.findByIdAndDelete(id)
             .then(res => response.json(res))
             .catch(err => response.status(400).send(err))
