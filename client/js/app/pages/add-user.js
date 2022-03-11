@@ -16,6 +16,8 @@ if (id) {
         const data = new FormData(event.target)
         const pessoaAtualizada = Object.fromEntries(data.entries())
 
+        console.log('entrou 1')
+
         RequestService.update(id, pessoaAtualizada)
             //.then(window.location.href = '../cadastro_concluido')
             //.then(window.location.href = './')
