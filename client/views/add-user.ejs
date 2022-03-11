@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CRUD App</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../assets/css/add-user.css">
+</head>
+
+<body>
+
+	<header id="header">
+		<nav class="nav-brand">
+			<a class="nav-brand__text" href="/">User Management System</a>
+		</nav>
+	</header>
+
+	<main id="site__main">
+		<div class="btn container__botao--all-users" >
+			<a href="/" class="text-gradient"><i class="fas fa-angle-double-left text-gradient"></i>All Users</a>
+		</div>
+
+		<section class="container-form">
+			<div class="container-form__title">
+				<h2>New User</h2>
+				<span>Use the below form to create a new account</span>
+			</div>
+			<form data-form action="/add-user.html" method="post">
+				<div class="form__group">		
+					<label class="text-light for="name">Name</label>		
+					<input type="text" name="name" id="name" value = "<%= user.name %>" required> 
+				</div>	
+				<div class="form__group">		
+					<label class="text-light for="email">Email</label>		
+					<input type="email" name="email" id="email" value = "<%= user.email %>" required> 
+				</div>	
+				<div class="radio inline">							
+					<legend class="text-light" >Gender</legend>
+					<input type="radio" name="gender" value="Male" id="male" <%= user.gender == 'Male' ? 'checked' : '' %>>
+					<label for="male">Male</label> 
+					<input type="radio" name="gender" value="Female" id="female" <%= user.gender == 'Female' ? 'checked' : '' %>>
+					<label for="female">Female</label>			
+				</div>
+				<div class="radio inline">							
+					<legend class="text-light">Active</legend>
+					<input type="radio" name="status" value="Active" id="active" <%= user.status == 'Active' ? 'checked' : '' %>>
+					<label for="active">Active</label> 
+					<input type="radio" name="status" value="Inactive" id="inactive" <%= user.status == 'Inactive' ? 'checked' : '' %>>
+					<label for="inactive">Inactive</label>						
+				</div>			
+
+				<button class="form__btn" type="submit" class="btn text-dark update">Save</button>	
+			</form>
+
+		</section>
+
+	</main>
+	<footer class="footer">
+		<p class="footer__text">Footer</p>
+	</footer>
+
+</body>
+
+<script type="module" src="../js/app/pages/add-user.js"></script>
+
+</html>
+
+
+
+
+
+
+
+

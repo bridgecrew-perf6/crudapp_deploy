@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CRUD App</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../assets/css/index.css">
+</head>
+<body>
+
+	<header id="header">
+		<nav class="nav-brand">
+			<a class="nav-brand__text" href="/">User Management System</a>
+		</nav>
+	</header>
+
+	<main>
+
+		<div class="container">
+
+			<div class="btn container__botao--add" >
+				<a href="./add-user.html" class="text-gradient"><i class="fas fa-user text-gradient"></i>New User</a><!-- https://fontawesome.com/ -->
+			</div>
+
+			<table class="tabela">
+				<thead class="tabela__thead--tr">
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Gender</th>
+						<th>Status</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<% for(var i=0; i < users.length; i++) {  %>
+
+					<tr class="tabela__tbody--tr">
+						<td><%= i + 1 %></td>
+						<td><%= users[i].name %></td>
+						<td><%= users[i].email %></td>
+						<td><%= users[i].gender %></td>
+						<td><%= users[i].status %></td>
+						<td>
+							<ul class="tabela__botoes--controle">
+								<li class="btn"><a href="./add-user.html?id=<%= users[i].id %>"><i class="fas fa-pencil-alt text-gradient"></i></a></li>
+								<li class="btn delete" data-id=<%= users[i].id %>><i data-id=<%= users[i].id %> class="fas fa-times text-gradient delete"></i></li>
+							</ul>
+						</td>
+					</tr>
+					
+					<% } %>
+
+				</tbody>
+			</table>
+		</div>
+
+	</main>
+
+	<footer class="footer">
+		<p class="footer__text">Footer index</p>
+	</footer>
+
+</body>
+
+<script type="module" src="../js/app/pages/index.js"></script>
+
+</html>

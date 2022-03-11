@@ -1,0 +1,158 @@
+:root{
+
+	--dark: #2B2D42;
+	--light: #ADB5BD ;
+	--border: #DEE2E6 ;
+	--border-btn: #EDF2F4;
+}
+
+* {
+
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;;
+}	
+
+a {
+	text-decoration: none;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.btn {
+
+	border: 1px solid var(--border-btn);
+	box-shadow: 1px 3px 10px #E9ECEF;	
+	padding: 0.5rem 1rem;
+}
+
+.text-gradient{
+
+	background: linear-gradient(to right, #8E2DE2, #4A00E0);
+	-webkit-background-clip:text;
+	background-clip: text;
+	-webkit-text-fill-color:transparent;
+}
+
+.nav-brand {
+
+	background: #06D6A0;
+	display: inline-block;
+	margin-bottom: 5rem;
+	padding: 1rem 0;
+	width: 100%;
+}
+
+.nav-brand__text {
+
+	color: var(--dark);
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding-left: 70%;
+}
+
+.container {
+
+	width: 70%;
+	margin-left: 15%;
+}
+
+.container__botao--add {
+
+	font-size: 1rem;
+	margin-bottom: 3rem;
+	text-align: center;
+	width: 15%;
+}
+
+.container__botao--add i {
+
+	margin-right: 10%;
+}
+
+.tabela {
+
+	border-spacing: 0px;
+	width: 100%;
+}
+
+.tabela td, .tabela th {
+
+	border-top: 1px solid var(--border);
+	padding: 0.75rem;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.tabela__botoes--controle {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.tabela__botoes--controle i {
+
+	font-size: 1.5rem;	
+}
+
+.tabela__botoes--controle li {
+
+	width: 35%;
+}
+
+.tabela__tbody--tr:hover{
+
+	background-color: #06D6A0
+}
+
+.tabela__thead--tr{
+
+	background-color: var(--dark);
+	border-color: #32383E;
+	color: #FEFEFE;
+}
+
+.footer {
+
+	background: #06D6A0;
+	display: inline-block;
+	margin-top: 5rem;
+	padding: 1rem 0;
+	width: 100%;
+}
+
+.footer__text {
+
+	color: var(--dark);
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding-left: 70%;
+}
+
+@media(max-width: 768px){
+
+	.tabela__thead--tr {
+
+		display: none;
+	}
+
+	.tabela__tbody--tr{
+
+		display: flex;
+		flex-direction: column;
+	}
+
+	.tabela__botoes--controle {
+
+	    justify-content: center;
+	}
+
+	.tabela__botoes--controle li {
+
+		width: 15%;
+	}
+}
+
+
+

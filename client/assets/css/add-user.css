@@ -1,0 +1,190 @@
+:root{
+
+	--dark: #2B2D42;
+	--light: #ADB5BD ;
+	--border: #DEE2E6 ;
+	--border-btn: #EDF2F4;
+}
+
+* {
+
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;;
+}	
+
+a {
+	text-decoration: none;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.btn {
+
+	border: 1px solid var(--border-btn);
+	box-shadow: 1px 3px 10px #E9ECEF;	
+	padding: 0.5rem 1rem;
+}
+
+.text-gradient{
+
+	background: linear-gradient(to right, #8E2DE2, #4A00E0);
+	-webkit-background-clip:text;
+	background-clip: text;
+	-webkit-text-fill-color:transparent;
+}
+
+.text-light {
+
+	color: #9fa2a6;
+}
+
+.nav-brand {
+
+	background: #06D6A0;
+	display: inline-block;
+	margin-bottom: 5rem;
+	padding: 1rem 0;
+	width: 100%;
+}
+
+.nav-brand__text {
+
+	color: var(--dark);
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding-left: 70%;
+}
+
+#site__main {
+
+	width: 50%;
+	margin-left: 25%;
+}
+
+.container__botao--all-users {
+
+	font-size: 1rem;
+	margin-bottom: 3rem;
+	width: 15%;
+	text-align: center;
+}
+
+.container__botao--all-users i{
+
+	margin-right: 10%;
+}
+
+.container-form__title {
+
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+.container-form__title h2 {
+
+	margin-bottom: 0.5rem;
+}
+
+.form__group input {
+
+	border: 1px solid var(--border);
+	border-radius: 0.35rem;
+	font-family: 'Barlow', sans-serif;
+	margin: 0.5rem 0;
+	padding: 0.6rem 1rem;
+	width: 100%
+}
+
+.radio {
+
+	display: flex;
+	align-items: center;
+}
+
+.radio legend {
+
+	margin-right: 1rem;
+}
+
+.radio label {
+
+	margin: 1rem 0.5rem;
+}
+
+.radio input {
+
+	display: none;
+	position: relative;
+	left: 1.5rem;
+}
+
+.radio label:before {
+
+	content: '';
+	width: 18px;
+	height: 18px;
+	background-color: white;
+	border: 1px solid gray;
+	border-radius: 4px;
+	display: inline-block;
+	vertical-align: bottom;
+	margin-right: 0.5rem;
+	transition: all 250ms ease;
+}
+
+.radio input:checked + label:before {
+
+	background-color: #16db93;
+	box-shadow: inset 0 0 0 4px #e9ecef;
+}
+
+.form__btn {
+
+	background-color: #16db93;
+	border: none;
+	border-radius: 0.35rem;
+	cursor: pointer;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 1rem;
+	padding: 1rem 1rem;
+	width: 100%;
+	margin-top: 2rem;
+}
+
+.form__btn:hover {
+
+	background-color: #20faaa;	
+}
+
+.footer {
+
+	background: #06D6A0;
+	display: inline-block;
+	margin-top: 5rem;
+	padding: 1rem 0;
+	width: 100%;
+}
+
+.footer__text {
+
+	color: var(--dark);
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding-left: 70%;
+}
+
+
+
+/*@media(max-width: 768px){
+
+}*/
+
+
+
+
+
+
+
+
+
+
