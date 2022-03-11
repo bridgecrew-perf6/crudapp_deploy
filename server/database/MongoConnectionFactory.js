@@ -37,9 +37,11 @@ const ConnectionFactory = {
 module.exports = ConnectionFactory
 */
 
+require('dotenv/config')
+
 const mongoose = require('mongoose')
 
-const uri = 'mongodb+srv://MarcosMendes:G3tS0m380s@cluster0.mvtsr.mongodb.net/MongoWiseDB?retryWrites=true&w=majority'
+const uri = process.env.DB_MONGODB_URI      //não esqueça: 
 
 const MongoConnectionFactory = {
 
