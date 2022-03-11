@@ -13,7 +13,7 @@ tabela.addEventListener('click', (event) => {
         const id = event.target.dataset.id
 
         RequestService.delete(id)
-            .then(location.reload())
+            //.then(location.reload())
             .catch(console.log)
     }
 })
