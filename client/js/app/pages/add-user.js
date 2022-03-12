@@ -18,7 +18,8 @@ if (id) {
 
         RequestService.update(id, pessoaAtualizada)
             //.then(window.location.href = '../cadastro_concluido')
-            .then(window.location.href = './')
+            //.then(window.location.href = './')
+            .then(alert('Cadastro atualizado com sucesso.'))
     })
 }
 

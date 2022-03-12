@@ -1,7 +1,6 @@
- export const RequestService = {
-    
-    //location: 'http://localhost:3000',
-    location: 'https://crudapp-testes.herokuapp.com',   
+export const RequestService = {
+
+    location: 'http://localhost:3333',
 
     update(id, data) {
 
