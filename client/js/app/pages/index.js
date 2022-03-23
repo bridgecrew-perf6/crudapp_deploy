@@ -2,6 +2,8 @@ import { RequestService } from '../services/RequestService.js'
 
 const tabela = document.querySelector('.tabela')
 
+console.log(RequestService.location)
+
 tabela.addEventListener('click', (event) => {
 
     const isBtnDelete = event.target.classList.contains('delete')
@@ -12,9 +14,8 @@ tabela.addEventListener('click', (event) => {
 
         const id = event.target.dataset.id
 
-        RequestService.delete(id)
-            //.then(location.reload())
-            .then(alert('test:reload.'))
+        RequestService.delete(id)            
+            .then(() => { event.target.closest('tr').remove() })    //.then(location.reload())
             .catch(console.log)
     }
 })

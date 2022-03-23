@@ -113,6 +113,14 @@ a {
 	color: #FEFEFE;
 }
 
+.container--flex-wraper {
+
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
 .footer {
 
 	background: #06D6A0;

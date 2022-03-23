@@ -4,7 +4,6 @@ const express = require('express')
 const path = require('path')
 const index = require('./routes/index')
 const add_user = require('./routes/add-user')
-const cadastro_concluido = require('./routes/cadastro_concluido')
 const MongoConnectionFactory = require('../database/MongoConnectionFactory')
 //const cors = require('cors')
 
@@ -33,7 +32,6 @@ app.use(express.static(path.join(__dirname, '../../client/')))
     /* Rotas (talvez seja melhor usar o 'Consign') */
 app.use(index)
 app.use(add_user)
-app.use(cadastro_concluido)
 
 module.exports = app
 

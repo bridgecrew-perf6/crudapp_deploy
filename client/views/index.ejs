@@ -12,58 +12,62 @@
 
 	<header id="header">
 		<nav class="nav-brand">
-			<a class="nav-brand__text" href="/">User Management System</a>
+			<a class="nav-brand__text" href="/">Header aqui</a>
 		</nav>
 	</header>
 
-	<main>
+	<div class="container--flex-wraper">
 
-		<div class="container">
+		<main>
 
-			<div class="btn container__botao--add" >
-				<a href="./add-user.html" class="text-gradient"><i class="fas fa-user text-gradient"></i>New User</a><!-- https://fontawesome.com/ -->
+			<div class="container">
+
+				<div class="btn container__botao--add" >
+					<a href="./add-user.html" class="text-gradient"><i class="fas fa-user text-gradient"></i>New User</a><!-- https://fontawesome.com/ -->
+				</div>
+
+				<table class="tabela">
+					<thead class="tabela__thead--tr">
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Gender</th>
+							<th>Status</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<% for(var i=0; i < users.length; i++) {  %>
+
+						<tr class="tabela__tbody--tr">
+							<td><%= i + 1 %></td>
+							<td><%= users[i].name %></td>
+							<td><%= users[i].email %></td>
+							<td><%= users[i].gender %></td>
+							<td><%= users[i].status %></td>
+							<td>
+								<ul class="tabela__botoes--controle">
+									<li class="btn"><a href="./add-user.html?id=<%= users[i].id %>"><i class="fas fa-pencil-alt text-gradient"></i></a></li>
+									<li class="btn delete" data-id=<%= users[i].id %>><i data-id=<%= users[i].id %> class="fas fa-times text-gradient delete"></i></li>
+								</ul>
+							</td>
+						</tr>
+						
+						<% } %>
+
+					</tbody>
+				</table>
 			</div>
 
-			<table class="tabela">
-				<thead class="tabela__thead--tr">
-					<tr>
-						<th>ID</th>
-						<th>Name</th>
-						<th>Email</th>
-						<th>Gender</th>
-						<th>Status</th>
-						<th>Action</th>
-					</tr>
-				</thead>
-				<tbody>
+		</main>
 
-					<% for(var i=0; i < users.length; i++) {  %>
+		<footer class="footer">
+			<p class="footer__text">Footer aqui</p>
+		</footer>
 
-					<tr class="tabela__tbody--tr">
-						<td><%= i + 1 %></td>
-						<td><%= users[i].name %></td>
-						<td><%= users[i].email %></td>
-						<td><%= users[i].gender %></td>
-						<td><%= users[i].status %></td>
-						<td>
-							<ul class="tabela__botoes--controle">
-								<li class="btn"><a href="./add-user.html?id=<%= users[i].id %>"><i class="fas fa-pencil-alt text-gradient"></i></a></li>
-								<li class="btn delete" data-id=<%= users[i].id %>><i data-id=<%= users[i].id %> class="fas fa-times text-gradient delete"></i></li>
-							</ul>
-						</td>
-					</tr>
-					
-					<% } %>
-
-				</tbody>
-			</table>
-		</div>
-
-	</main>
-
-	<footer class="footer">
-		<p class="footer__text">Footer index</p>
-	</footer>
+	</div>
 
 </body>
 

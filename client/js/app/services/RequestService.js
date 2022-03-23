@@ -1,6 +1,8 @@
+import { serviceConfig as config }  from './serviceConfig.js'
+
 export const RequestService = {
 
-    location: 'http://localhost:3333',
+    location: config.location.dev,
 
     update(id, data) {
 
